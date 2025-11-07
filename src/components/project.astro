@@ -18,21 +18,21 @@ const projects: Project[] = [
     title: "Kimchi Celery",
     image: kimchi as ImageMetadata,
     link: "https://kimcelerykimchi.netlify.app/",
-    preview: "https://kimcelerykimchi.netlify.app/",
+    preview: "/kimchi",
     status: "Deployed",
   },
   {
-    title: "Famous Possessions",
+    title: "Famouse Possessions",
     image: famous as ImageMetadata,
     link: "https://shaeeh.ca/assignment4/",
-    preview: "https://shaeeh.ca/assignment4/",
+    preview: "/famous",
     status: "Deployed",
   },
   {
     title: "Church",
     image: church as ImageMetadata,
     link: "https://eyadyaghi.ca/capstone/",
-    preview: "https://eyadyaghi.ca/capstone/",
+    preview: "/church",
     status: "On Development",
   },
 ];
@@ -49,12 +49,7 @@ const projects: Project[] = [
       {
         projects.map((project) => (
           <div class="group">
-            <a
-              href={project.preview}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block"
-            >
+            <a href={project.preview} class="block">
               <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
                 <Image
                   src={project.image}
@@ -62,6 +57,7 @@ const projects: Project[] = [
                   class="w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
+            </a>
               <div class="flex items-center px-3">
                 <div class="flex-grow">
                   <h4 class="text-2xl font-semibold">{project.title}</h4>

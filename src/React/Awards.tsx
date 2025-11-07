@@ -37,17 +37,16 @@ const SkillsList = () => {
   const [openItem, setOpenItem] = useState<string | null>(null);
 
   const skills = {
-    "Web Development": [
-      "Frontend development",
-      "Single Page Applications (SPAs)",
-      "CMS integration (Wordpress, Shopify, etc.)",
-      "Performance optimization & CEO basics",
+    "Educations": [
+      "Digital Media & IT – Web Development Diploma At NAIT",
+      "Queen Elizabeth High School - Diploma 2015",
     ],
 
-    "UI/UX Design & Prototyping": [
-      "UI design with Figma & Canva",
-      "UX research & improvements",
-      "Prototyping for websites & mobile apps",
+    "Awards": [
+      "NAIT Dean's Honour Roll - 2024 & 2025",
+      "Libra Bursary I-II Scholarship - 2024",
+      "Jason Lang Scholarship - 2025",
+
     ],
     
   };
@@ -58,15 +57,12 @@ const SkillsList = () => {
 
   return (
     <div className="text-left pt-3 md:pt-9 ">
-      <h3 className="text-[var(--white)] text-3xl md:text-4xl font-semibold md:mb-6 text-center">
-        What I do?
-      </h3>
-      <ul className="space-y-4 mt-4 text-lg flex items-center justify-center gap-3 p-4">
+      <ul className="space-y-4 mt-4 text-lg  gap-3 ">
         {Object.entries(skills).map(([category, items]) => (
           <li key={category} className="w-full flex items-center justify-center">
             <div
               onClick={() => toggleItem(category)}
-              className=" md:w-[400px] w-full bg-[#1414149c] rounded-2xl text-left hover:bg-opacity-80 transition-all border border-[var(--white-icon-tr)] cursor-pointer overflow-hidden"
+              className="  w-full bg-[#1414149c] rounded-2xl text-left hover:bg-opacity-80 transition-all border border-[var(--white-icon-tr)] cursor-pointer overflow-hidden"
             >
               <div className="flex items-center gap-3 p-4">
                 {CategoryIcons[category]}

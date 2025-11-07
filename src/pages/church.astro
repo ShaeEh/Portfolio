@@ -1,0 +1,77 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav.astro";
+import Footer from "@/components/footer.astro";
+
+const project = {
+  title: "Church",
+  description: `Church is my capstone project, a full website showcasing a church layout and services.`,
+  images: ["../../public/church.png", "../../public/run.png"],
+  liveLink: "https://eyadyaghi.ca/capstone/",
+};
+
+const otherProjects = [
+  {
+    slug: "kimchi",
+    title: "Kimchi Celery",
+    image: "../../public/kimchi.png",
+  },
+  {
+    slug: "famous",
+    title: "Famous Possessions",
+    image: "../../public/famous.png",
+  },
+];
+---
+
+<Layout title={`Project | ${project.title}`}>
+  <Nav />
+
+  <main class="max-w-5xl mx-auto py-12 space-y-12 text-[var(--white)]">
+    <h1 class="text-4xl md:text-5xl font-bold">{project.title}</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {project.images.map((img) => (
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <img src={img} alt={project.title} class="w-full h-auto object-cover" />
+        </div>
+      ))}
+    </div>
+
+    <p class="text-lg md:text-xl text-[var(--white-icon)]">{project.description}</p>
+
+    <a
+      href={project.liveLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block px-6 py-3 bg-[#A9FF5B] text-black font-semibold rounded-xl shadow-lg hover:bg-[#8ACC4F] transition-colors duration-300"
+    >
+      Go to Site
+    </a>
+
+    <section>
+      <h2 class="text-2xl md:text-3xl font-semibold mb-6">Other Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {otherProjects.map((p) => (
+          <a
+            href={`/${p.slug}`}
+            class="group block rounded-2xl overflow-hidden shadow-lg border border-transparent hover:border-[var(--white-icon-tr)] transition-all duration-300"
+          >
+            <div class="w-full h-40 overflow-hidden">
+              <img
+                src={p.image}
+                alt={p.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="px-4 py-2 text-center bg-[#1414149c] group-hover:bg-[var(--white-icon-tr)] transition-colors">
+              <h3 class="font-semibold text-lg text-[var(--white)] group-hover:text-white">{p.title}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
