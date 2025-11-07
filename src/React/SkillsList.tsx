@@ -56,16 +56,16 @@ const SkillsList = () => {
   };
 
   return (
-    <div className="text-left pt-3 md:pt-9">
-      <h3 className="text-[var(--white)] text-3xl md:text-4xl font-semibold md:mb-6">
+    <div className="text-left pt-3 md:pt-9 ">
+      <h3 className="text-[var(--white)] text-3xl md:text-4xl font-semibold md:mb-6 text-center">
         What I do?
       </h3>
-      <ul className="space-y-4 mt-4 text-lg">
+      <ul className="space-y-4 mt-4 text-lg flex items-center justify-center gap-3 p-4">
         {Object.entries(skills).map(([category, items]) => (
-          <li key={category} className="w-full">
+          <li key={category} className="w-full flex items-center justify-center">
             <div
               onClick={() => toggleItem(category)}
-              className="md:w-[400px] w-full bg-[#1414149c] rounded-2xl text-left hover:bg-opacity-80 transition-all border border-[var(--white-icon-tr)] cursor-pointer overflow-hidden"
+              className=" md:w-[500px] w-full bg-[#1414149c] rounded-2xl text-left hover:bg-opacity-80 transition-all border border-[var(--white-icon-tr)] cursor-pointer overflow-hidden"
             >
               <div className="flex items-center gap-3 p-4">
                 {CategoryIcons[category]}
