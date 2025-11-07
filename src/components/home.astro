@@ -4,8 +4,8 @@ import LogoWall from "../components/logoWall.astro";
 import SkillsList from "../React/SkillsList.tsx";
 ---
 
-<section class="text-[var(--white)] mt-12 md:mt-0" id="home">
-  <div class="max-w-5xl mx-auto space-y-8 md:py-36 pb-14">
+<section class="text-[var(--white)] 12 md:mt-0" id="home">
+  <div class="max-w-7xl mx-auto space-y- md:py-36 pb-14">
     <div class="text-left space-y-4">
       <p class="text-md md:text-lg text-[var(--white-icon)] shiny-white">
         Hi, I'm Ta Shae Shae Eh
@@ -19,10 +19,8 @@ import SkillsList from "../React/SkillsList.tsx";
           Web<br /> Developer
         </h1>
         <p class="text-md md:text-2xl text-[var(--white-icon)]">
-          Transforming ideas into interactive and seamless digital experiences
-          with cutting-edge <span class="text-[var(--sec)] shiny-sec"
-            >frontend</span
-          > development.
+          I build websites so you can focus on what matters most — growing your business, reaching your goals, and making an impact. From UX and UI to creative design, I handle every detail of your digital presence, delivering websites that look great, work flawlessly, and help you succeed.
+        
         </p>
       </div>
       <div class="flex justify-start gap-2 pt-3 md:pt-6">
@@ -81,16 +79,25 @@ import SkillsList from "../React/SkillsList.tsx";
       </div>
     </div>
 
-    <LogoWall />
+    
 
     <div class="flex flex-col lg:flex-row items-center gap-8">
-      <SkillsList client:load />
+      
       <div
-        class="flex justify-center md:w-full md:h-[292px] size-[290px] pt-3 md:pt-9 md:ml-16"
+        class=" md:w-full md:h-[400px] size-[290px] pt-3 md:pt-9 md:ml-16"
       >
-      <p>picture here</p>
+      <p style="text-indent: 50px;">I am a web designer and aspiring developer based in Edmonton, Alberta. Born in Thailand and raised in Canada, I’ve been fascinated by technology ever since I arrived here. Exploring new tools, learning how things work, and creating digital experiences has always been a passion of mine. It’s what led me to study Digital Media and IT (DMIT) at NAIT, where I’m currently in my final semester preparing to step into the world as a junior web developer.</p>
+      <br>
+      <p>I love coming up with fresh ideas to make each client’s website stand out, whether through sleek interfaces, interactive features, or creative visuals that truly reflect their brand.</p>
+      <br>
+      <p>When I’m not designing or coding, you’ll probably find me hiking, playing sports, especially volleyball, or staying active outdoors. I enjoy being on the move and finding inspiration from new experiences, which often sparks fresh ideas for my projects. I’m passionate about crafting digital experiences that are not only functional but memorable, helping clients connect with their audience in meaningful ways. If you’re looking for someone to bring your website vision to life with creativity and precision, let’s connect. I’d love to collaborate!</p>
+
+      
       </div>
+      <SkillsList client:load />
     </div>
+    <LogoWall />
+
   </div>
 </section>
 

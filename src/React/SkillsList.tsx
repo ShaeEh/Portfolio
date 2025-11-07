@@ -38,14 +38,12 @@ const SkillsList = () => {
 
   const skills = {
     "Web Development": [
+      "Frontend development",
       "Single Page Applications (SPAs)",
-      "Landing pages and business websites",
-      "Portfolio websites",
+      "CMS integration (Wordpress, Shopify, etc.)",
+      "Performance optimization & CEO basics",
     ],
-    "Mobile Development": [
-      "Mobile-friendly web apps",
-      "React Native mobile apps",
-    ],
+
     "UI/UX Design & Prototyping": [
       "UI design with Figma & Canva",
       "UX research & improvements",
