@@ -13,18 +13,18 @@ const navItems: NavItem[] = [
   },
   {
     label: "About",
-    href: "/about", // 👈 Goes to /about.astro
+    href: "/about-page", // 👈 Goes to /about.astro
     icon: `<svg xmlns="http://www.w3.org/2000/svg" ...></svg>`,
   },
   {
     label: "Projects",
-    href: "/project", // 👈 Goes to /project.astro
+    href: "/project-page", // 👈 Goes to /project.astro
     icon: `<svg xmlns="http://www.w3.org/2000/svg" ...></svg>`,
   },
 
   {
     label: "Contact",
-    href: "/contact", // 👈 Optional if you have a /contact.astro
+    href: "/contact-page", // 👈 Optional if you have a /contact.astro
     icon: `<svg xmlns="http://www.w3.org/2000/svg" ...></svg>`,
   },
 ];
@@ -143,7 +143,7 @@ const navItems: NavItem[] = [
 // Smooth scroll only for same-page section links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    const target = e.currentTarget;
+    const target = e.currentTarget as HTMLAnchorElement;;
     const href = target.getAttribute("href");
 
     // Only intercept if it’s an in-page section
