@@ -1,9 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import run from "../../public/run.png";
 import kimchi from "../../public/kimchi.png";
 import famous from "../../public/famous.png";
-import church from "../../public/church.png";
+import church from "../../public/church-home.png";
 
 interface Project {
   title: string;
@@ -29,7 +28,7 @@ const projects: Project[] = [
     status: "Deployed",
   },
   {
-    title: "Church",
+    title: "Ebenezer Karen Baptist Church",
     image: church as ImageMetadata,
     link: "https://eyadyaghi.ca/capstone/",
     preview: "/church",
@@ -85,7 +84,7 @@ const projects: Project[] = [
               </div>
             </a>
           </div>
-        ))
+        ));
       }
     </div>
     <a
